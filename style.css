@@ -42,7 +42,7 @@ button {
     color: white;
 }
 
-.btn-operation {
+.btn-operations {
     background-color: hsl(40, 4%, 43%);
     color: #F4AB41;
 }
@@ -52,8 +52,9 @@ button {
     width: 220px;
 }
 
-.ac {
+#ac {
     color: #fd9801;
+    
 }
 
 button:hover {
@@ -64,11 +65,11 @@ button:active {
     background-color: hsl(213, 6%, 55%);
 }
 
-.btn-operation:hover {
+.btn-operations:hover {
     background-color: hsl(36, 89%, 71%);
 }
 
-.btn-operation:active {
+.btn-operations:active {
     background-color: hsl(36, 89%, 81%);
 }
 
