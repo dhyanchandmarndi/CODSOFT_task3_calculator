@@ -1,22 +1,26 @@
-const display = document.getElementById("display");
+let display = document.getElementById('display');
+let buttons = document.querySelectorAll('button');
 
-function appendToDisplay(input) {
-    display.value += input;
-}
 
-function clearDisplay() {
-    display.value = "";
-}
+let string = '';
 
-function del() {
-    display.value = display.value.slice(0, -1);
-}
-
-function calculate() {
-    try {
-        display.value = eval(display.value);
-    }
-    catch(error) {
-        display.value = "Error!";
-    }
-}
+buttons.forEach(element => {
+    element.addEventListener('click', (b)=>{
+        if(b.target.innerText == '=') {
+            string = String(eval(string))
+            display.value = string;
+        }
+        else if(b.target.innerText == 'AC') {
+            string = '';
+            display.value = string;
+        }
+        else if(b.target.innerText == 'DEL') {
+            string = string.substring(0, string.length-1);
+            display.value = string;
+        }
+        else{
+            string += b.target.innerText;
+            display.value = string;
+        }
+    })
+})
